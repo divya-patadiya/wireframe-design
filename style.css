@@ -12,14 +12,39 @@
     height: 50%;
     width: 50%;
 }
+.hover{
+    opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+   
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+/* -------------------------------------------- */
 @media screen and (max-width:450px)  {
     .container1 {
         width: 100%;
-        height: 100%;
-        background-color: aqua;
+        height: 100%;  
     }
    
     /* quick links */
+    .ql-font{
+        font-size: 12px;
+    }
     .div-design {
         height: 30px;
         background-color: #262262;
@@ -38,34 +63,58 @@
     p {
         padding-bottom: 5px;
         margin: 0;
+        color: #262262;
     }
     .links {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
         margin: 2px;
+        border: none;
+        overflow: hidden;
+
     }
+    
     .div1 {
         width: 33%;
-        height: 50%;
+        /* height: 50%; */
         text-align: center;
         background-color: #262262;
         color: white;
         border: 0;
+        padding: 10px;
+        opacity: 1;
+        margin: 0 auto;
+    }
+    .div1>p{
+        color: white;
+    }
+    .div1:hover{
+        opacity: 0.5;
     }
     .div2 {
         width: 33%;
-        height: 50%;
+        /* height: 50%; */
         text-align: center;
         background-color: white;
         color: #262262;
         border: 0;
+        padding: 10px;
+        opacity: 1;
+        margin: 0 auto;
+    }
+    .div2:hover{
+        opacity: 0.5;
     }
     /* carousel */
     .carousel {
         background-color: aquamarine;
         margin-bottom: 5px;
+        
     }
+  .font-c{
+      color: white;
+  }
     .slide {
         display: none;
     }
@@ -132,7 +181,7 @@
     .prev:hover {
         left: 1em;
     }
-    .dot {
+    /* .dot {
         width: 12px;
         height: 12px;
         background-color: blueviolet;
@@ -149,7 +198,7 @@
         justify-content: center;
         width: 100%;
         bottom: 1.5em;
-    }
+    } */
     .active,
     .dot:hover {
         opacity: 1;
@@ -169,6 +218,10 @@
     /* core-values */
     .core-value-img {
         width: 100%;
+        opacity: 1;
+    }
+    .core-value-img:hover{
+        opacity: 0.5;
     }
     /* marquee */
     .marquee {
@@ -197,7 +250,9 @@
     /* location */
     .location {
         border: 0;
-        width: 100%;
+        width: 95%;
+        margin: 8px;
+        
     }
     /* anniversary */
     .plant-caption-anni {
@@ -235,11 +290,11 @@
         width: 20%;
         
     }
-    img{
+    /* img{
         height: 20%;
         width: 20%;
         border-radius: 50px;
-    }
+    } */
     .emp-div{
         display: inline-block;
         padding-top:5px;
@@ -257,11 +312,12 @@
     /* company directory */
     .searchContainer {
         display: inline-flex;
-        flex: 1 1 300px;
+        flex: 1 1 700px;
         position: relative;
         border: 1px solid #ccc;
         border-radius: 5px;
         overflow: hidden;
+        width:100%;
       }
       
       .searchIcon {
@@ -271,7 +327,7 @@
       .searchBox {
         border: 0;
         padding: 0.5rem 0.5rem 0.5rem 0;
-        flex: 1;
+        flex: 2;
       }
       
       .searchButton {
@@ -290,19 +346,35 @@
     }
     .div1-doc {
         width: 50%;
-        height: 50%;
+       margin: 0 auto;
         text-align: center;
         background-color: #262262;
         color: white;
+        padding: 10px;
         border: 0;
+        opacity: 1;
+        height: 100px;
+    }
+    .div1-doc>p{
+        color: white;
+    }
+    .div1-doc:hover{
+        opacity: 0.5;
     }
     .div2-doc {
         width: 50%;
-        height: 50%;
+       margin: 0 auto;
         text-align: center;
+        padding: 10px;
+    
         background-color: white;
         color: #262262;
         border: 0;
+        opacity: 1;
+        height: 100px;
+    }
+    .div2-doc:hover{
+        opacity: 0.5;
     }
 }
 /* ----------------------------------------------------------------------------- */
@@ -314,7 +386,10 @@
     
     }
   /* quick links */
-  .div-design {
+  .ql-font{
+    font-size: 12px;
+}
+.div-design {
     height: 30px;
     background-color: #262262;
     border-radius: 6px;
@@ -326,41 +401,63 @@
     padding: 4px;
     margin: 2px;
 }
-/* .quick-links {
+.quick-links {
     background-color: antiquewhite;
-} */
+}
 p {
     padding-bottom: 5px;
     margin: 0;
+    color: #262262;
 }
 .links {
     display: flex;
     flex-wrap: wrap;
-  
-  
+    width: 100%;
+    margin: 2px;
+    border: none;
+    overflow: hidden;
+
 }
+
 .div1 {
     width: 33%;
-    height: 50%;
+    /* height: 50%; */
     text-align: center;
     background-color: #262262;
     color: white;
     border: 0;
+    padding: 10px;
+    opacity: 1;
+    margin: 0 auto;
+}
+.div1>p{
+    color: white;
+}
+.div1:hover{
+    opacity: 0.5;
 }
 .div2 {
     width: 33%;
-    height: 50%;
+    /* height: 50%; */
     text-align: center;
     background-color: white;
     color: #262262;
     border: 0;
+    padding: 10px;
+    opacity: 1;
+    margin: 0 auto;
+}
+.div2:hover{
+    opacity: 0.5;
 }
 /* carousel */
 .carousel {
     background-color: aquamarine;
     margin-bottom: 5px;
-    overflow-y: hidden;
     
+}
+.font-c{
+  color: white;
 }
 .slide {
     display: none;
@@ -428,7 +525,7 @@ p {
 .prev:hover {
     left: 1em;
 }
-.dot {
+/* .dot {
     width: 12px;
     height: 12px;
     background-color: blueviolet;
@@ -445,7 +542,7 @@ p {
     justify-content: center;
     width: 100%;
     bottom: 1.5em;
-}
+} */
 .active,
 .dot:hover {
     opacity: 1;
@@ -465,6 +562,8 @@ p {
 /* core-values */
 .core-value-img {
     width: 70%;
+    text-align: center;
+    margin-left:120px;
     
    
 }
@@ -535,6 +634,13 @@ p {
    
     
 }
+.img-cd{
+    display:inline-block;
+    height: 100px;
+}
+.desc-cd{
+    display: inline-block;
+}
 /* img{
     height: 20%;
     width: 20%;
@@ -547,21 +653,23 @@ p {
 }
 /* news */
 .news-img{
-    display: inline;
-    height: 20%;
-    width: 20%;
+    display: inline-block;
+    height: 100px;
+  
 }
 .news-desc{
     display: inline-block;
 }
+
 /* company directory */
 .searchContainer {
-    display:flex;
-    flex-wrap: wrap;
+    display: inline-flex;
+    flex: 1 1 700px;
     position: relative;
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
+    width:100%;
   }
   
   .searchIcon {
@@ -571,20 +679,7 @@ p {
   .searchBox {
     border: 0;
     padding: 0.5rem 0.5rem 0.5rem 0;
-    flex: 1;
-  }
-  .cd{
-      display: flex;
-  }
-  .img-cd{
-      width: 20%;
-      height: 50px;
-      
-  }
-  .desc-cd{
-      padding: 15px;
-      width: 80%;
-      height: 130px;
+    flex: 2;
   }
   
   .searchButton {
@@ -603,19 +698,35 @@ p {
 }
 .div1-doc {
     width: 50%;
-    height: 50%;
+   margin: 0 auto;
     text-align: center;
     background-color: #262262;
     color: white;
+    padding: 10px;
     border: 0;
+    opacity: 1;
+    height: 100px;
+}
+.div1-doc>p{
+    color: white;
+}
+.div1-doc:hover{
+    opacity: 0.5;
 }
 .div2-doc {
     width: 50%;
-    height: 50%;
+   margin: 0 auto;
     text-align: center;
+    padding: 10px;
+
     background-color: white;
     color: #262262;
     border: 0;
+    opacity: 1;
+    height: 100px;
+}
+.div2-doc:hover{
+    opacity: 0.5;
 }
 }
 /* ----------------------------------------------------------------------------- */
@@ -640,32 +751,44 @@ p {
     display:flex;
     flex-wrap: wrap;
     height: 40%;
+   
     
 }
 .quick-links{
     width: 30%;
+    height: 40%;
 }
 .carousel{
     width: 40%;
+    height: 250px;
+   
 }
 .core-values{
     width: 30%;
+    height: 40%;
 }
 /* second row */
 .second-row{
     display: flex;
-    flex-wrap: wrap;
+   
     height: 40%;
     
 }
 .document-library{
     width: 30%;
+    height: 40%;
 }
 .calendar-div{
     width: 40%;
+    height: 40%;
 }
 .waether{
     width: 30%;
+    height: 40%;
+}
+.waether-img{
+    width: 100%;
+    height: 300px;
 }
 
 
@@ -679,9 +802,17 @@ p {
 
 .company-directory{
     width: 30%;
+   
+}
+.img-cd{
+    overflow: hidden;
 }
 .news{
     width: 40%;
+    height: 260px;
+}
+.news-img{
+    overflow: hidden;
 }
 .location-div{
     width: 30%;
@@ -694,12 +825,16 @@ p {
 }
 .anniversary{
     width: 25%;
+    height: 350px;
 }
 .employee-feedback{
     width: 25%;
+    
 }
+
 .new-employee{
     width: 25%;
+    height: 350px;
 }
 /* end */
 }
